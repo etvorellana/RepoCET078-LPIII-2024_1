@@ -12,7 +12,9 @@ int main(void)
     printf("RAND_MAX = %d\n", RAND_MAX);
     int jogo[10];
     printf("Simulando 10 lançamentos de um dado:\n");
-    jogaOsDados(jogo, 1, 6, 0);
+    int min = 1;
+    jogaOsDados(jogo, min, 6, 0);
+    printf("%d\n", min);
     printJogo(jogo);
     printf("Todas as vezes que rodar este exemplo vai gerar o mesmo resultado!\n");
     int semente;
@@ -23,7 +25,7 @@ int main(void)
     printf("Sementes diferentes irão gerar resultados diferentes!\n");
     printf("A mesma semente gera o mesmo resultado!\n");
     printf("Escolhendo a semente de forma automática\n");
-    jogaOsDados(jogo, 1, 6, -1);
+    jogaOsDados(&jogo[0], 1, 6, -1);
     printJogo(jogo);
     printf("Todas as vezes que rodar este exemplo gera diferentes resultados!\n");
     return 0;
@@ -41,6 +43,7 @@ void jogaOsDados(int jogo[10], int min, int tam, int semente)
     {
         jogo[i] = min + rand() % tam;
     }
+    min++;
 }
 
 void printJogo(int jogo[10])

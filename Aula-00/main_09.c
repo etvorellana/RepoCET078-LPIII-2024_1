@@ -37,11 +37,16 @@ void naoTrocaValores(double x, double y)
 void trocaValores(double *x, double *y)
 {
     double z;
+    //double *z;
     printf("Na função trocaValores chegou: \n");
+    //printf("&x = %d, &y = %d\n", x, y);
     printf("x = %f, y = %f\n", *x, *y);
     z = *x;
+    //z = x;
     *x = *y;
+    //x = y;
     *y = z;
+    //y = z;
     printf("Após a troca temos: \n");
     printf("6- x = %f, y = %f\n", *x, *y);
 }
