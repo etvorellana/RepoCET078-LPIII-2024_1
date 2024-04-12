@@ -17,7 +17,7 @@ typedef struct
     MetodoInt mudaSemente;
 } tJogo;
 
-void printJogo(void* jogo);
+void printJogo(void* jogo); 
 void jogaOsDados(void* jogo);
 void mudaSemente(void* jogo, long unsigned int semente);
 tJogo inicializaJogo(int qtVezes, int min, int tam, long unsigned int semente);

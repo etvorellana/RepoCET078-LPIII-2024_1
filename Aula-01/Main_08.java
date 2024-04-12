@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main_08 {
-
+ 
     public static void main(String[] args) {
         System.out.println("Trabalhando com arrays unidimensionais\n");
         int jogo[] = new int[10];
@@ -15,7 +15,7 @@ public class Main_08 {
         Scanner sc = new Scanner(System.in);
         semente = sc.nextLong();
         jogaOsDados(jogo, 1, 6, semente);
-        printJogo(jogo);
+        printJogo(jogo); 
         System.out.println("Sementes diferentes irão gerar resultados diferentes!\n");
         System.out.println("A mesma semente gera o mesmo resultado!\n");
         System.out.println("Escolhendo a semente de forma automática\n");
